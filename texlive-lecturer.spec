@@ -1,3 +1,9 @@
+# revision 23916
+# category Package
+# catalog-ctan /macros/generic/lecturer
+# catalog-date 2011-09-11 12:44:24 +0200
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-lecturer
 Version:	20110911
 Release:	1
@@ -81,6 +87,7 @@ both v.1.02.
 %doc %{_texmfdistdir}/doc/generic/lecturer/lecturer-doc.pdf
 %doc %{_texmfdistdir}/doc/generic/lecturer/lecturer-doc.tex
 %doc %{_texmfdistdir}/doc/generic/lecturer/universe.jpg
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -91,3 +98,5 @@ both v.1.02.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
