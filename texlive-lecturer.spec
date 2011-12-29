@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The package creates slides for on-screen presentations based on
@@ -43,20 +41,12 @@ management of PDF objects, probably), works only with pdfTeX
 and LuaTeX for the time being, and requires texapi and yax,
 both v.1.02.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -88,7 +78,6 @@ both v.1.02.
 %doc %{_texmfdistdir}/doc/generic/lecturer/lecturer-doc.pdf
 %doc %{_texmfdistdir}/doc/generic/lecturer/lecturer-doc.tex
 %doc %{_texmfdistdir}/doc/generic/lecturer/universe.jpg
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -99,5 +88,3 @@ both v.1.02.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
