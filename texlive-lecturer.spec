@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-lecturer
 Version:	20180303
-Release:	2
+Release:	3
 Summary:	On-screen presentations for (almost) all formats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/lecturer
