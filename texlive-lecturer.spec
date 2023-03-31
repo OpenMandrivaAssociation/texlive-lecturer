@@ -1,6 +1,6 @@
 Name:		texlive-lecturer
 Version:	23916
-Release:	1
+Release:	2
 Summary:	On-screen presentations for (almost) all formats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/lecturer
