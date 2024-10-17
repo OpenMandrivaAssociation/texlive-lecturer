@@ -3,7 +3,7 @@ Version:	23916
 Release:	2
 Summary:	On-screen presentations for (almost) all formats
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/lecturer
+URL:		https://www.ctan.org/tex-archive/macros/generic/lecturer
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lecturer.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lecturer.doc.r%{version}.tar.xz
